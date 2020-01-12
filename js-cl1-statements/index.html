@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Statements</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    
+    <h1>JS Statemeent</h1>
+
+    <h3>Conditional Statement</h3>
+
+    <form action="#">
+        <input type="number" name="numberInput" id="numberInput">
+        <input type="button" onclick="isEven()" value="Check">
+    </form>
+
+    <p id="result1"></p>
+
+    <hr>
+
+    <h3>Check Result</h3>
+
+    <form action="#">
+        <input type="number" name="mark" id="mark">
+        <input type="button" onclick="checkMark()" value="Check">
+    </form>
+
+    <p id="result2"></p>
+
+    <hr>
+
+    <h3>Check Day</h3>
+
+    <form action="#">
+        <select name="day" id="day">
+            <option value="SUN">SUN</option>
+            <option value="MON">MON</option>
+            <option value="TUE">TUE</option>
+            <option value="WED">WED</option>
+            <option value="THU">THU</option>
+            <option value="FRI">FRI</option>
+            <option value="SAT">SAT</option>
+        </select>
+
+        <input type="button" value="Check" onclick="checkDay()">
+    </form>
+
+    <p id="result3"></p>
+
+    <hr>
+
+    <h3>Multiplicity</h3>
+
+    <form action="#">
+        <input type="number" min="1" required name="base" id="base">
+        <input type="number" min="1" required name="times" id="times">
+        <input type="button" value="Make" onclick="makeMultiply()">
+    </form>
+
+    <p id="result4"></p>
+</body>
+</html>
