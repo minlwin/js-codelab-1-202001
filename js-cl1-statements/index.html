@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS Statements</title>
     <script src="index.js"></script>
 </head>
@@ -11,7 +9,7 @@
     
     <h1>JS Statemeent</h1>
 
-    <h3>Conditional Statement</h3>
+    <h3>Even or Not</h3>
 
     <form action="#">
         <input type="number" name="numberInput" id="numberInput">
@@ -22,7 +20,7 @@
 
     <hr>
 
-    <h3>Check Result</h3>
+    <h3>Student Marks</h3>
 
     <form action="#">
         <input type="number" name="mark" id="mark">
@@ -55,10 +53,10 @@
 
     <h3>Multiplicity</h3>
 
-    <form action="#">
-        <input type="number" min="1" required name="base" id="base">
-        <input type="number" min="1" required name="times" id="times">
-        <input type="button" value="Make" onclick="makeMultiply()">
+    <form action="#" method="POST">
+        <input type="number" name="base" id="base" />
+        <input type="number" name="times" id="times" />
+        <input type="submit" value="Make" onclick="makeMultiply(); return false;">
     </form>
 
     <p id="result4"></p>
