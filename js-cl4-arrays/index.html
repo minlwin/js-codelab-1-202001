@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="/node_modules/jquery/jquery.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Product Management</h1>
+            <p class="lead">Learning Javascript Arrays</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="#">
+
+            <div class="row">
+                <div class="col-4">
+                   <div class="form-group">
+                     <label for="category">Category</label>
+                     <select class="form-control" name="category" id="category">
+                       <option>Fashion</option>
+                       <option>Accessory</option>
+                       <option>Mens</option>
+                       <option>Ladies</option>
+                     </select>
+                   </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text" id="name" placeholder="Enter Product Name" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" placeholder="Enter Price" id="price" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <input type="text" placeholder="Enter Size" id="size" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" placeholder="Enter Color" id="color" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="4" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary">Save Product</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

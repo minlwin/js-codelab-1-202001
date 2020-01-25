@@ -66,7 +66,7 @@ function makeMultiply() {
     let text = ''
     for(let i = 1; i <= times; i ++) {
         let result  = `${base} * ${i} = ${base * i}`
-        text = text ? (text + '\n' + result) : result
+        text = text ? text + '\n' + result : result
     }
 
     document.getElementById('result4').innerText = text
