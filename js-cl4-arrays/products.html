@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product List</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="/node_modules/jquery/jquery.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/application.js"></script>
+
 </head>
-<body>
+<body onload="loadProducts()">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Product List</h1>
+
+            <p><a href="/index.html" class="btn btn-primary">Add New Product</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Color</th>
+                    <th>Description</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="products">
+
+            </tbody>
+        </table>
+    </div>
     
 </body>
 </html>
