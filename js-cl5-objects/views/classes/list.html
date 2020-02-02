@@ -28,11 +28,62 @@
     <div class="ui container">
         <h1>Class Management</h1>
 
-        <a href="/views/classes/edit.html" class="ui animated grey button">
-            <div class="visible content">Add Class</div>
-            <div class="hidden content"><i class="plus icon"></i> Plus One</div>
-        </a>
+        <form action="#" class="ui form">
+            <div class="fields">
+                <div class="field">
+                    <label for="course">Course</label>
+                    <select name="course" id="course" class="ui dropdown">
+                        <option value="0">All Course</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" name="startDate" id="startDate" placeholder="Start Date">
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <a href="#" class="ui animated grey button">
+                        <div class="visible content">Search</div>
+                        <div class="hidden content">
+                            <i class="search icon"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <a href="/views/classes/edit.html" class="ui animated grey button">
+                        <div class="visible content">Add New</div>
+                        <div class="hidden content"><i class="plus icon"></i></div>
+                    </a>
+                </div>
+            </div>
+        </form>
+
+
+        <table class="ui grey selectable striped table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Course</th>
+                    <th>Duration</th>
+                    <th>Days</th>
+                    <th>Times</th>
+                    <th>Fees</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+        </table>
+
     </div>
+
+    <script>
+        $(() => {
+            $('.ui.dropdown').dropdown()
+        })
+    </script>
     
 </body>
 </html>

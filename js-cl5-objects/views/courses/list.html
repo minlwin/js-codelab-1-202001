@@ -10,6 +10,8 @@
 
     <script src="/semantic-ui/jquery.min.js"></script>
     <script src="/semantic-ui/semantic.min.js"></script>
+    <script src="/application/course-management.mjs" type="module"></script>
+
 </head>
 <body>
 
@@ -28,12 +30,36 @@
     <div class="ui container">
         <h1>Course Management</h1>
 
-        <a href="/views/courses/edit.html" class="ui animated vertical grey button">
-            <div class="visible content">Add New Course</div>
-            <div class="hidden content">
-                <i class="plus icon"></i> Plus One
+        <form action="#" class="ui form">
+            <div class="fields">
+
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Search Name">
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <div id="search" class="ui animated grey button">
+                        <div class="visible content">Search</div>
+                        <div class="hidden content">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label >&nbsp;</label>
+                    <div id="addNew" class="ui animated grey button">
+                        <div class="visible content">Add New</div>
+                        <div class="hidden content">
+                            <i class="plus icon"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </a>
+        </form>
+
 
         <table class="ui grey selectable striped table">
             <thead>
@@ -46,37 +72,55 @@
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Java SE</td>
-                    <td>3 Months</td>
-                    <td>200,000 MMK</td>
-                    <td>Basic Course</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Java Web</td>
-                    <td>3 Months</td>
-                    <td>200,000 MMK</td>
-                    <td>Intermediate Course</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Spring Web</td>
-                    <td>4 Months</td>
-                    <td>300,000 MMK</td>
-                    <td>Advance Course</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Jarkata EE 8</td>
-                    <td>4 Months</td>
-                    <td>300,000 MMK</td>
-                    <td>Advance Course</td>
-                </tr>
+            <tbody id="courses">
             </tbody>
         </table>
+
+        <div class="ui tiny modal">
+            <div class="header">
+                <i class="pencil icon"></i> <span id="title">Add New Course</span>
+            </div>
+
+            <div class="content">
+                
+                <form action="#" class="ui form">
+
+                    <div class="field">
+                        <label for="courseName">Course Name</label>
+                        <input type="text" id="courseName" placeholder="Enter Course Name">
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <lable>Duration</lable>
+                            <input type="number" name="duration" id="duration" placeholder="Enter Duration">
+                        </div>
+
+                        <div class="field">
+                            <label for="fees">Fees</label>
+                            <input type="number" name="fees" id="fees" placeholder="Enter Fees">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="actions">
+                <div id="save" class="ui red animated button">
+                    <div class="visible content">Save</div>
+                    <div class="hidden content"><i class="save icon"></i></div>
+                </div>
+
+                <div id="close" class="ui animated blue button">
+                    <div class="visible content">Close</div>
+                    <div class="hidden content"><i class="close icon"></i></div>
+                </div>
+            </div>
+        </div>
     
     </div>
     

@@ -26,7 +26,45 @@
     </nav>
 
     <div class="ui container">
-        <h1>Hello Semantic UI</h1>
+        <h1>Student Management</h1>
+
+        <form action="#" class="ui form">
+            <div class="fields">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" placeholder="Search Name" />
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phonr" placeholder="Search Phone">
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <a class="ui animated grey button">
+                        <div class="visible content">Search</div>
+                        <div class="hidden content">
+                            <i class="search icon"></i>
+                        </div>
+                    </a>                    
+                </div>
+            </div>
+        </form>
+
+        <table class="ui selectable grey striped table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Entrance Date</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Remark</th>
+                </tr>
+            </thead>
+        </table>
     </div>
     
 </body>

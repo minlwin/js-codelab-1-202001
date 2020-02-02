@@ -26,8 +26,76 @@
     </nav>
 
     <div class="ui container">
-        <h1>Hello Semantic UI</h1>
+        <h1>Registration Management</h1>
+
+        <form action="#" class="ui form">
+            <div class="fields">
+
+                <div class="field">
+                    <label for="course">Course</label>
+                    <select name="course" id="course" class="ui dropdown">
+                        <option value="-1">All Course</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="dateFrom">Date From</label>
+                    <input type="date" name="dateFrom" id="dateFrom" placeholder="Date From">
+                </div>
+
+                <div class="field">
+                    <label for="name">Student</label>
+                    <input type="text" placeholder="Student Name" id="name">
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Student Phone">
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <a href="#" class="ui animated grey button">
+                        <div class="visible content">Search</div>
+                        <div class="hidden content">
+                            <i class="search icon"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <a href="#" class="ui animated grey button">
+                        <div class="visible content">Add New</div>
+                        <div class="hidden content">
+                            <i class="plus icon"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </form>
+
+        <table class="ui striped selectable grey table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Course</th>
+                    <th>Start Day</th>
+                    <th>Student</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+        </table>
     </div>
+
+    <script>
+        $(() => {
+            $('.ui.dropdown').dropdown()
+        })
+    </script>
     
 </body>
 </html>
