@@ -10,6 +10,7 @@
 
     <script src="/semantic-ui/jquery.min.js"></script>
     <script src="/semantic-ui/semantic.min.js"></script>
+    <script src="/application/class-controller.mjs" type="module"></script>
 </head>
 <body>
 
@@ -31,33 +32,33 @@
         <form action="#" class="ui form">
             <div class="fields">
                 <div class="field">
-                    <label for="course">Course</label>
-                    <select name="course" id="course" class="ui dropdown">
+                    <label for="searchCourse">Course</label>
+                    <select name="course" id="searchCourse" class="ui dropdown">
                         <option value="0">All Course</option>
                     </select>
                 </div>
 
                 <div class="field">
-                    <label for="startDate">Start Date</label>
-                    <input type="date" name="startDate" id="startDate" placeholder="Start Date">
+                    <label for="from">Date From</label>
+                    <input type="date" name="from" id="startDate" placeholder="Start Date">
                 </div>
 
                 <div class="field">
                     <label>&nbsp;</label>
-                    <a href="#" class="ui animated grey button">
+                    <div id="searchBtn" class="ui animated grey button">
                         <div class="visible content">Search</div>
                         <div class="hidden content">
                             <i class="search icon"></i>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="field">
                     <label>&nbsp;</label>
-                    <a href="/views/classes/edit.html" class="ui animated grey button">
+                    <div id="addBtn" class="ui animated grey button">
                         <div class="visible content">Add New</div>
                         <div class="hidden content"><i class="plus icon"></i></div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </form>
@@ -68,15 +69,64 @@
                 <tr>
                     <th>ID</th>
                     <th>Course</th>
-                    <th>Duration</th>
+                    <th>Start Date</th>
                     <th>Days</th>
                     <th>Times</th>
                     <th>Fees</th>
-                    <th>Duration</th>
+                    <th>Description</th>
                 </tr>
             </thead>
+            <tbody></tbody>
         </table>
 
+        <div class="ui tiny modal">
+            <div class="header">
+                <i class="icon pencil"></i> <span id="title">Edit Class</span>
+            </div>
+
+            <div class="content">
+
+                <form action="#" class="ui form">
+
+                    <div class="field">
+                        <label for="course">Course Name</label>
+                        <select class="ui dropdown" name="course" id="course"></select>
+                    </div>
+
+                    <div class="field">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" name="startDate" id="startDate" placeholder="Enter Start Date">
+                    </div>
+
+                    <div class="two wide fields">
+                        
+                        <div class="field">
+                            <label for="days">Days</label>
+                            <input type="text" id="days" placeholder="Enter Days">
+                        </div>
+
+                        <div class="field">
+                            <label for="times">Times</label>
+                            <input type="text" id="times" placeholder="Enter Times">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="actions">
+                <div id="closeBtn" class="ui animated grey button">
+                    <div class="visible content">Close</div>
+                    <div class="hidden content"><i class="close icon"></i></div>
+                </div>
+
+                <div id="saveBtn" class="ui animated grey button">
+                    <div class="visible content">Save</div>
+                    <div class="hidden content"><i class="save icon"></i></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>

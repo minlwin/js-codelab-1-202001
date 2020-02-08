@@ -2,8 +2,12 @@ export const STORAGE_KEY = "com.jdc.student.management"
 
 export class TableRowHelper {
 
-    setRows(tbody, list) {
+    setRows(tbody, list, editFun) {
 
+        // clear rows
+        $(tbody).empty()
+
+        // add rows
         for(let data of list) {
 
             let tr = $('<tr/>')
@@ -11,6 +15,14 @@ export class TableRowHelper {
             for(let field in data) {
                 tr.append($('<td />').text(data[field]))
             }
+
+            // add edit column
+            let td = $('<td />')
+            let div = $('<div class="center aligned" />')
+            div.append('<i class="ui icon pencil">')
+            div.click(() => editFun(data))
+            td.append(div)
+            tr.append(td)
 
             tbody.append(tr)
         }
