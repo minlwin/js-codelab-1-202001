@@ -33,14 +33,14 @@
             <div class="fields">
                 <div class="field">
                     <label for="searchCourse">Course</label>
-                    <select name="course" id="searchCourse" class="ui dropdown">
+                    <select name="course" id="schCourse" class="ui dropdown">
                         <option value="0">All Course</option>
                     </select>
                 </div>
 
                 <div class="field">
                     <label for="from">Date From</label>
-                    <input type="date" name="from" id="startDate" placeholder="Start Date">
+                    <input type="date" name="from" id="schFrom" placeholder="Start Date">
                 </div>
 
                 <div class="field">
@@ -74,9 +74,10 @@
                     <th>Times</th>
                     <th>Fees</th>
                     <th>Description</th>
+                    <th></th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="classes"></tbody>
         </table>
 
         <div class="ui tiny modal">
@@ -87,6 +88,8 @@
             <div class="content">
 
                 <form action="#" class="ui form">
+
+                    <input type="hidden" id="classId">
 
                     <div class="field">
                         <label for="course">Course Name</label>

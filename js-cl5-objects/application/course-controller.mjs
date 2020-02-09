@@ -35,7 +35,7 @@ class CourseController {
     }
 
     clearInputs() {
-        $('#courseId').val("0")
+        $('#courseId').val("")
         $('#courseName').val("")
         $('#duration').val("")
         $('#fees').val("")

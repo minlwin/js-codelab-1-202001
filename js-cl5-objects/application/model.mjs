@@ -6,8 +6,9 @@ class BaseModel {
     key
     list = []
 
-    constructor(key) {
+    constructor(key, idKey) {
         this.key = key
+        this.idKey = idKey
 
         let storageObject = JSON.parse(localStorage.getItem(this.key))
 
@@ -16,9 +17,13 @@ class BaseModel {
         }
     }
 
+    findById(id) {
+        return this.list.filter(data => data.id == id).pop()
+    }
+
     save(data) {
         if(!data.id) {
-            data.id = idGenerater.generate("course")
+            data.id = idGenerater.generate(this.idKey)
             this.list.push(data)
         } else {
 
@@ -40,7 +45,7 @@ class BaseModel {
 export class CourseModel extends BaseModel{
 
     constructor() {
-        super(`${STORAGE_KEY}.course`)
+        super(`${STORAGE_KEY}.course`, 'course')
     }
 
     search(name) {
@@ -61,7 +66,11 @@ export function Course(id, name, duration, fees, description) {
 export class ClassRoomModel extends BaseModel {
 
     constructor() {
-        super(`${STORAGE_KEY}.class`)
+        super(`${STORAGE_KEY}.class`, 'classRoom')
+    }
+
+    search(course, startDate) {
+        return this.list
     }
 
 }
@@ -77,7 +86,7 @@ export function ClassRoom(id, course, startDate, days, times) {
 export class StudentModel extends BaseModel{
 
     constructor() {
-        super(`${STORAGE_KEY}.student`)
+        super(`${STORAGE_KEY}.student`, 'student')
     }
 }
 
@@ -93,7 +102,7 @@ export function Student(id, name, phone, email, address, remark) {
 export class RegistrationModel extends BaseModel {
 
     constructor() {
-        super(`${STORAGE_KEY}.registration`)
+        super(`${STORAGE_KEY}.registration`, 'registration')
     }
 }
 
